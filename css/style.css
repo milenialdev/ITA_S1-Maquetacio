@@ -66,6 +66,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.button--shadow {
+  box-shadow: rgba(83, 104, 223, 0.25) 0rem 0.3rem 0.6rem;
+}
+
+
 .hero__buttons {
   display: flex;
   flex-direction: row;
@@ -239,4 +244,72 @@ body {
   display: flex;
 }
 
+.download {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.download__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(37, 43, 70);
+}
+
+.download__description {
+  font-size: 1rem;
+  color: rgb(145, 148, 161);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.download__dots {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+
+.download__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.download__card {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.download__icon {
+  width: 60px;
+}
+
+.download__browser {
+  font-size: 1.2rem;
+  color: rgb(37, 43, 70);
+}
+
+.download__version {
+  color: rgb(145, 148, 161);
+}
+
+.download__button {
+  background-color: #5267df;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
 
