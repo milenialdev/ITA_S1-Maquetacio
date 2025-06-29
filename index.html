@@ -5,17 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Carlos Benito">
   <title>Bookmark Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <header class="header">
-        <div class="header__container">
-        <img src="assets/images/logo-bookmark.svg" alt="Bookmark logo" class="header__logo" />
-        <button class="header__menu_button" aria-label="Open menu">
-            <img src="assets/icons/icon-hamburger.svg" alt="Menu icon" class="header__menu_icon" />
-        </button>
-        </div>
-    </header>
+  <input type="checkbox" id="menu-toggle" class="header__toggle" hidden />
+  <div class="header__container">
+    <img src="assets/images/logo-bookmark.svg" alt="Bookmark logo" class="header__logo" />
+    <label for="menu-toggle" class="header__menu_button" aria-label="Toggle menu">
+      <img src="assets/icons/icon-hamburger.svg" alt="Menu icon" class="header__menu_icon" />
+    </label>
+  </div>
+
+  <nav class="mobile-menu">
+    <div class="mobile-menu__header">
+      <img src="assets/images/logo-bookmark-white.svg" alt="Bookmark logo white" class="mobile-menu__logo" />
+      <label for="menu-toggle" class="mobile-menu__close" aria-label="Close menu">
+        <img src="assets/icons/icon-close.svg" alt="Close icon" class="mobile-menu__close_icon" />
+      </label>
+    </div>
+    <ul class="mobile-menu__list">
+      <li><a href="#features" class="mobile-menu__link">FEATURES</a></li>
+      <li><a href="#pricing" class="mobile-menu__link">PRICING</a></li>
+      <li><a href="#contact" class="mobile-menu__link">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
+
     <section class="hero">
         <div class="hero__image_container">
             <img src="assets/images/illustration-hero.svg" alt="App illustration" class="hero__image" />
@@ -146,5 +163,23 @@
          <button type="submit" class="cta__button button--shadow">Contact Us</button>
          </form>
     </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <img src="assets/images/logo-bookmark-white.svg" alt="Bookmark logo white" class="footer__logo" />
+            <ul class="footer__nav">
+                <li><a href="#" class="footer__link">Features</a></li>
+                <li><a href="#" class="footer__link">Pricing</a></li>
+                <li><a href="#" class="footer__link">Contact</a></li>
+            </ul>
+            <div class="footer__social">
+                <a href="#" class="footer__social_link" aria-label="Facebook">
+                    <img src="assets/icons/icon-facebook.svg" alt="Facebook" />
+                </a>
+            <a href="#" class="footer__social_link" aria-label="Twitter">
+                <img src="assets/icons/icon-twitter.svg" alt="Twitter" />
+            </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

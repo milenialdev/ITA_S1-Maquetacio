@@ -6,7 +6,7 @@
 
 /* Mobile-first styling */
 body {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: #ffffff;
   color: #333;
 }
@@ -40,9 +40,72 @@ body {
 }
 
 .header__menu_icon {
-  width: 24px;
-  height: 18px;
+  width: 17px;
+  height: 14px;
 }
+
+.header__toggle:checked ~ .mobile-menu {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(36, 42, 69);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 2rem;
+  gap: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 999;
+}
+
+.mobile-menu__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu__logo {
+  height: 17px;
+}
+
+.mobile-menu__close_icon {
+  width: 17px;
+  height: 17px;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-menu__link:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 
 .hero {
   display: flex;
@@ -444,4 +507,50 @@ body {
   cursor: pointer;
   box-shadow: rgba(250, 87, 87, 0.25) 0rem 0.3rem 0.6rem;
   margin: 0 auto;
+}
+
+.footer {
+  background-color: rgb(36, 42, 69);
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__logo {
+  height: 24px;
+}
+
+.footer__nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__social_link img {
+  width: 17px;
+  height: 17px;
+  filter: brightness(0) invert(1); /* asegúrate que los iconos se vean en fondo oscuro */
+  transition: opacity 0.3s ease-in-out;
 }
