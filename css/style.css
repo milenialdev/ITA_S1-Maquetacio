@@ -129,10 +129,17 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.button--shadow {
-  box-shadow: rgba(83, 104, 223, 0.25) 0rem 0.3rem 0.6rem;
+.button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: rgba(83, 104, 223, 0.25) 0 0.3rem 0.6rem;
+  background-color: #5267df;
+  color: #fff;
 }
-
 
 .hero__buttons {
   display: flex;
@@ -140,14 +147,6 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.hero__button {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .hero__button--chrome {
@@ -289,17 +288,6 @@ body {
   font-size: 1rem;
   padding: 0 1rem;
 }
-.features__panel_button {
-  background-color: #5267df;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
 
 #feature1:checked ~ .features__nav_list ~ .features__content .features__panel--1,
 #feature2:checked ~ .features__nav_list ~ .features__content .features__panel--2,
@@ -363,17 +351,6 @@ body {
 
 .download__version {
   color: rgb(145, 148, 161);
-}
-
-.download__button {
-  background-color: #5267df;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .faq {
@@ -444,18 +421,6 @@ body {
   padding-bottom: 1rem;
 }
 
-.faq__button {
-  background-color: #5267df;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-top: 2rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
 .cta {
   background-color: #5267df;
   color: #fff;
@@ -499,13 +464,8 @@ body {
 .cta__button {
   background-color: rgb(250, 87, 87);
   width: 75%;
-  color: #fff;
   padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: rgba(250, 87, 87, 0.25) 0rem 0.3rem 0.6rem;
+  box-shadow: rgba(250, 87, 87, 0.25) 0 0.3rem 0.6rem;
   margin: 0 auto;
 }
 
