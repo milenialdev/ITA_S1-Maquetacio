@@ -551,6 +551,6 @@ body {
 .footer__social_link img {
   width: 17px;
   height: 17px;
-  filter: brightness(0) invert(1); /* asegúrate que los iconos se vean en fondo oscuro */
+  filter: brightness(0) invert(1);
   transition: opacity 0.3s ease-in-out;
 }
