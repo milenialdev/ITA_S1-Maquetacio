@@ -14,7 +14,6 @@ body {
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   padding: 1rem;
   background-color: #ffffff;
@@ -206,7 +205,7 @@ body {
   left: 30%;
   z-index: -1;
   border-bottom-left-radius: 5rem;
-  max-width: 768px;
+  max-width: inherit;
 }
 
 .features {
@@ -289,7 +288,7 @@ body {
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   text-align: center;
 }
 
@@ -308,6 +307,12 @@ body {
   max-width: 500px;
   font-size: 1rem;
   padding: 0 1rem;
+  margin-top: 1rem;;
+}
+
+.features__panel button {
+  margin-top: 1rem;
+  width: 100%;
 }
 
 #feature1:checked ~ .features__nav_list ~ .features__content .features__panel--1,
@@ -684,6 +689,14 @@ body {
     max-width: 300px;
   }
 
+   .download__card:nth-child(2) {
+    margin-top: 3rem;
+  }
+
+  .download__card:nth-child(3) {
+    margin-top: 5rem;
+  }
+
    .faq {
     padding: 4rem 2rem;
   }
@@ -761,9 +774,14 @@ body {
 }
 
 @media (min-width: 1024px) {
+
+.header{
+  margin: 0 auto;
+}
+
 .hero {
-  padding: 0.5rem;
-    gap: 0rem;
+  padding-left: 3rem;
+  gap: 0rem;
   }
 
   .hero__title {
@@ -774,14 +792,15 @@ body {
     font-size: 1.25rem;
   }
 
-  .hero__image {
-  width: 100%;
-}
-
   .hero__image_container {
     max-width: inherit;
     right: 30px;
   }
+
+   .hero__image {
+  width: 60%;
+}
+
 
   .features {
     padding: 6rem 5rem;
@@ -840,15 +859,17 @@ body {
   }
 
   .download__cards {
+    margin: 0 auto;
     gap: 3rem;
+    max-width: 1200px;
   }
 
   .download__card:nth-child(2) {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .download__card:nth-child(3) {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .faq {
@@ -914,14 +935,13 @@ body {
 .faq,
 .cta,
 .footer {
-  max-width: 1200px;
+  max-width: 2880px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .header__container {
-  max-width: 1900px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 28800px;
+  margin: 0 auto;
   width: 100%;
 }
