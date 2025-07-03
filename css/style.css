@@ -928,7 +928,6 @@ body {
   }
 }
 
-.header,
 .hero,
 .features,
 .download,
@@ -941,7 +940,7 @@ body {
 }
 
 .header__container {
-  max-width: 28800px;
+  max-width: 2880px;
   margin: 0 auto;
   width: 100%;
 }
