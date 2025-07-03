@@ -597,9 +597,9 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    padding-left: 0,5rem;
+    padding-left: 2rem;
     padding-right: 2rem;
-    gap: 3rem;
+    gap: 2rem;
     overflow-x: hidden;
   }
 
@@ -779,28 +779,9 @@ body {
   margin: 0 auto;
 }
 
-.hero {
-  padding-left: 3rem;
-  gap: 0rem;
+.hero__content{
+  margin-left: 4rem; 
   }
-
-  .hero__title {
-    font-size: 2rem;
-  }
-
-  .hero__description {
-    font-size: 1.25rem;
-  }
-
-  .hero__image_container {
-    max-width: inherit;
-    right: 30px;
-  }
-
-   .hero__image {
-  width: 60%;
-}
-
 
   .features {
     padding: 6rem 5rem;
