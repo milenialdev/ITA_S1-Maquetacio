@@ -1,0 +1,35 @@
+// Variables de colores
+$color-primary: #5267df;
+$color-secondary: #fa5757;
+$color-bg: #ffffff;
+$color-text: #333;
+$color-title: rgb(37, 43, 70);
+$color-description: rgb(145, 148, 161);
+$color-header-bg: #ffffff;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-border: rgba(255, 255, 255, 0.3);
+$color-card-bg: #f9f9f9;
+$color-footer-bg: rgb(36, 42, 69);
+$color-cta-bg: #5267df;
+$color-cta-btn: rgb(250, 87, 87);
+$color-white: #fff;
+$color-light-gray: #f7f7f7;
+$color-hover-login: #f93e3e;
+$color-dark-blue: rgb(36, 42, 69);
+
+// Variables de fuentes
+$font-main: 'Rubik', sans-serif;
+
+// Variables de tamaños
+$radius-main: 5px;
+$radius-card: 10px;
+$radius-input: 10px;
+
+// Variables de sombras
+$shadow-main: 0 2px 4px $color-shadow;
+$shadow-card: 0 8px 16px $color-shadow;
+$shadow-btn-cta: rgba(250, 87, 87, 0.25) 0 0.3rem 0.6rem;
+$shadow-btn: rgba(83, 104, 223, 0.25) 0 0.3rem 0.6rem;
+
+// Variables de transición
+$transition-main: 0.3s ease-in-out;

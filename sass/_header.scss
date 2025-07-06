@@ -1,0 +1,159 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: $color-header-bg;
+  box-shadow: $shadow-main;
+  z-index: 1000;
+
+  &__container {
+    @include flex-center(1rem);
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    height: 24px;
+  }
+
+  &__login {
+    display: none;
+  }
+
+  &__menu_button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__menu_icon {
+    width: 17px;
+    height: 14px;
+  }
+
+  &__toggle:checked ~ .mobile-menu {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    &__menu_button {
+      display: none;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+    &__nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin-left: auto;
+    }
+    &__nav_link {
+      text-decoration: none;
+      color: $color-description;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      @include transition(color);
+    }
+    &__nav_link:hover {
+      color: $color-secondary;
+    }
+    &__login {
+      display: flex;
+      padding: 0.6rem 1.5rem;
+      background-color: $color-secondary;
+      color: $color-white;
+      text-decoration: none;
+      border-radius: $radius-main;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-left: 2rem;
+      @include transition(background-color);
+    }
+    &__login:hover {
+      background-color: $color-hover-login;
+    }
+  }
+  @include respond-to(desktop) {
+    margin: 0 auto;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: $color-dark-blue;
+  color: $color-white;
+  @include flex-center(2rem);
+  flex-direction: column;
+  justify-content: start;
+  padding: 2rem;
+  transform: translateX(100%);
+  @include transition(transform);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 999;
+
+  &__header {
+    @include flex-center();
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 17px;
+  }
+
+  &__close_icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    color: $color-white;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-top: 1px solid $color-border;
+    @include transition(color);
+
+    &:last-child {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  &__login {
+    display: block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: $color-white;
+    border: 1px solid white;
+    border-radius: $radius-main;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}

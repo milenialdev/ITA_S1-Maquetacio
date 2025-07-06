@@ -1,0 +1,30 @@
+// Aquí puedes agregar tus mixins reutilizables
+
+@mixin button-base {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: $radius-main;
+  cursor: pointer;
+  transition: background-color $transition-main;
+  box-shadow: $shadow-btn;
+}
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin transition($props: all) {
+  transition: #{$props} $transition-main;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) { @content; }
+  }
+}

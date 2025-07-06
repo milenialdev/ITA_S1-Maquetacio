@@ -1,0 +1,194 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  text-align: center;
+  gap: 1.5rem;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $color-title;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: $color-description;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__nav_list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__nav_button {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: $color-description;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: color 0.2s ease-in-out;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      height: 0.3rem;
+      background-color: $color-secondary;
+      width: 50%;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &__nav_button:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__content {
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  &__panel {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+
+    img {
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+
+  &__panel_title {
+    font-size: 1.5rem;
+    color: $color-title;
+  }
+
+  &__panel_description {
+    color: $color-description;
+    max-width: 500px;
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  &__panel button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  @include respond-to(tablet) {
+    padding: 4rem 2rem;
+    align-items: center;
+
+    .features__title {
+      font-size: 2rem;
+    }
+    .features__description {
+      font-size: 1.125rem;
+    }
+    .features__nav_list {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .features__nav_button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+    .features__content {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+    .features__panel {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1000px;
+    }
+    .features__panel img {
+      max-width: 400px;
+    }
+    .features__panel_description {
+      padding: 0;
+    }
+  }
+
+  @include respond-to(desktop) {
+    padding: 6rem 5rem;
+    .features__panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 5rem;
+      text-align: left;
+    }
+    .features__panel img {
+      max-width: 100%;
+      height: auto;
+    }
+    .features__nav_list {
+      gap: 0rem;
+    }
+    .features__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      text-align: left;
+    }
+    .features__panel_title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .features__panel_description {
+      font-size: 1.125rem;
+      color: $color-description;
+      max-width: 500px;
+    }
+    .features__pannel_button{
+      justify-self: start;
+    }
+  }
+}
+
+#feature1:checked ~ .features__nav_list li:nth-child(1) .features__nav_button,
+#feature2:checked ~ .features__nav_list li:nth-child(2) .features__nav_button,
+#feature3:checked ~ .features__nav_list li:nth-child(3) .features__nav_button {
+  color: $color-dark-blue;
+}
+
+#feature1:checked ~ .features__nav_list li:nth-child(1) .features__nav_button::after,
+#feature2:checked ~ .features__nav_list li:nth-child(2) .features__nav_button::after,
+#feature3:checked ~ .features__nav_list li:nth-child(3) .features__nav_button::after {
+  background-color: $color-secondary;
+}
+
+#feature1:checked ~ .features__nav_list ~ .features__content .features__panel--1,
+#feature2:checked ~ .features__nav_list ~ .features__content .features__panel--2,
+#feature3:checked ~ .features__nav_list ~ .features__content .features__panel--3 {
+  display: flex;
+} 
