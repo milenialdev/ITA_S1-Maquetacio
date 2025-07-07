@@ -915,13 +915,13 @@ body {
 .faq,
 .cta,
 .footer {
-  max-width: 2880px;
+  max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .header__container {
-  max-width: 2880px;
+  max-width: 1536px;
   margin: 0 auto;
   width: 100%;
 }
