@@ -23,18 +23,18 @@
             </ul>
             <a href="#" class="hidden md:inline-block bg-red-500 text-white px-6 py-2 rounded shadow hover:bg-red-600 transition">Login</a>
         </div>
-        <nav>
-            <div>
-                <img src="/tailwind/assets/images/logo-bookmark-white.svg" alt="Bookmark logo white" />
-                <label for="menu-toggle" aria-label="Close menu">
-                    <img src="/tailwind/assets/icons/icon-close.svg" alt="Close icon" />
+        <nav class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-8 z-50 transition-opacity duration-300 opacity-0 pointer-events-none md:hidden" id="mobile-menu">
+            <div class="w-full flex justify-between items-center px-4 mb-8">
+                <img src="/tailwind/assets/images/logo-bookmark-white.svg" alt="Bookmark logo white" class="h-8" />
+                <label for="menu-toggle" class="cursor-pointer" aria-label="Close menu">
+                    <img src="/tailwind/assets/icons/icon-close.svg" alt="Close icon" class="h-6 w-6" />
                 </label>
             </div>
-            <ul>
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">PRICING</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">LOGIN</a></li>
+            <ul class="flex flex-col items-center space-y-6 w-full">
+                <li><a href="#features" class="text-white text-lg font-medium w-full text-center py-2 hover:bg-white hover:text-black rounded">FEATURES</a></li>
+                <li><a href="#pricing" class="text-white text-lg font-medium w-full text-center py-2 hover:bg-white hover:text-black rounded">PRICING</a></li>
+                <li><a href="#contact" class="text-white text-lg font-medium w-full text-center py-2 hover:bg-white hover:text-black rounded">CONTACT</a></li>
+                <li><a href="#" class="text-white text-lg font-medium w-full text-center py-2 border-t border-gray-600 mt-4 hover:bg-white hover:text-black rounded">LOGIN</a></li>
             </ul>
         </nav>
     </header>
