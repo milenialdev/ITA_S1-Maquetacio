@@ -1,6 +1,0 @@
-@import "tailwindcss";
-
-#menu-toggle:checked ~ nav#mobile-menu {
-    opacity: 1;
-    pointer-events: auto;
-  }
