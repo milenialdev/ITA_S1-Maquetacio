@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+    --font-Rubik: "Rubik", "sans-serif";
+
+    --color-red-custom: rgb(250, 87, 87);
+    --color-gray-light: rgb(145, 148, 161);
+    --color-blue-dark: rgb(37, 43, 70);
+    --color-blue-light: rgb(83, 104, 223);
+
+
+    
+    --shadow-red-custom: 0rem 0.3rem 0.6rem rgba(250, 87, 87, 0.3);
+    --shadow-gray-custom: rgba(0, 0, 0, 0.2) 0rem 0.3rem 0.6rem;
+
+}
+
+#menu-toggle:checked ~ nav#mobile-menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
