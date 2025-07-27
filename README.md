@@ -41,14 +41,6 @@ main (versión final)
 
 ---
 
-## 🌐 Demo / Deploy
-
-Puedes ver la versión desplegada en:
-[https://milenialdev.github.io/sprint-1-maquetacio-i](https://milenialdev.github.io/sprint-1-maquetacio-i)  
-*(Asegúrate de seleccionar la rama adecuada si el deploy varía por tecnología)*
-
----
-
 ## 👤 Autor
 
 Desarrollado por [@milenialdev](https://github.com/milenialdev)
